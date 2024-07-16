@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>CRYPTO</h1>
+    <Input />
+    <div className="selectors">
+        <Selector />
+        <Selector />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Input from './components/input'
+import Selector from './components/selector'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    components: { Input, Selector }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.selectors {
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    margin: 0 auto;
 }
 </style>
