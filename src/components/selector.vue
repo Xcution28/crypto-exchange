@@ -1,14 +1,19 @@
 <template>
     <ul>
-        <li>Bitcoin</li>
-        <li>ETH</li>
-        <li>USDT</li>
+        <li @click="setCrypto('BTS')">Bitcoin</li>
+        <li @click="setCrypto('ETH')">ETH</li>
+        <li @click="setCrypto('USDT')">USDT</li>
     </ul>
 </template>
 
 <script>
 export default {
-
+    methods: {
+        setCrypto: {
+            type: Function,
+            required: true
+        }
+    }
 }
 </script>
 

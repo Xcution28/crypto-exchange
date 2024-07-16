@@ -1,4 +1,4 @@
-# weather-web
+# crypto-exchange
 
 ## Project setup
 ```
