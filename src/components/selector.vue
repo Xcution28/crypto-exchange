@@ -1,16 +1,20 @@
 <template>
     <ul>
-        <li @click="setCrypto('BTS')">Bitcoin</li>
-        <li @click="setCrypto('ETH')">ETH</li>
-        <li @click="setCrypto('USDT')">USDT</li>
+        <li @click="setCrypto('BTC')" :class="cryptoCurrent === 'BTC' ? 'active' : ''">BTC</li>
+        <li @click="setCrypto('ETH')" :class="cryptoCurrent === 'ETH' ? 'active' : ''">ETH</li>
+        <li @click="setCrypto('USDT')" :class="cryptoCurrent === 'USDT' ? 'active' : ''">USDT</li>
     </ul>
 </template>
 
 <script>
 export default {
-    methods: {
+    props: {
         setCrypto: {
             type: Function,
+            required: true
+        },
+        cryptoCurrent: {
+            type: String,
             required: true
         }
     }
@@ -33,8 +37,8 @@ li {
     padding: 20px 0;
 }
 
-li:hover, li:active {
-    background: #24043e;
+li:hover, li.active {
+    background: #8c00ff;
     cursor: pointer;
 }
 </style>
